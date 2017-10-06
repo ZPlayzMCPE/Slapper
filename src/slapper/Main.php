@@ -672,7 +672,7 @@ class Main extends PluginBase implements Listener {
 		if($type === "Human") {
 			$player->saveNBT();
 			$nbt->Inventory = clone $player->namedtag->Inventory;
-			$nbt->Skin = new CompoundTag("Skin", ["Data" => new StringTag("Data", $player->getSkin()->getSkinData()), "Name" => new StringTag("Name", $player->getSkin()->getSkinId())]);
+			$nbt->Skin = new CompoundTag("Skin", ["Data" => new StringTag("Data", $sender->getSkin()->getSkinData()), "Name" => new StringTag("Name", $sender->getSkin()->getSkinId())]);
 		}
 		return $nbt;
 	}
